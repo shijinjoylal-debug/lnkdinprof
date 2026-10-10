@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurorean</title>
+    <style>
+      :root {
+        --bg: #f3f7fb;
+        --surface: #ffffff;
+        --surface-alt: #eef4ff;
+        --primary: #0f172a;
+        --secondary: #475569;
+        --accent: #2563eb;
+        --accent-dark: #1d4ed8;
+        --border: #dfeaf5;
+        --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 40%, #eef2ff 100%);
+        color: var(--primary);
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 60px 20px 80px;
+      }
+
+      .hero {
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: 48px 40px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--accent);
+        background: rgba(37, 99, 235, 0.08);
+        padding: 8px 12px;
+        border-radius: 999px;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0 0 16px;
+        font-size: clamp(2.2rem, 4vw, 4rem);
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+      }
+
+      .subtitle {
+        margin: 0;
+        max-width: 760px;
+        font-size: 1.08rem;
+        color: var(--secondary);
+      }
+
+      .projects {
+        display: grid;
+        gap: 24px;
+        margin-top: 40px;
+      }
+
+      .project-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 28px 30px;
+        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+      }
+
+      .project-card h2 {
+        margin: 0 0 14px;
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        line-height: 1.3;
+      }
+
+      .project-card h3 {
+        margin: 0 0 12px;
+        font-size: 1.1rem;
+        color: var(--accent-dark);
+      }
+
+      .site-link {
+        display: inline-block;
+        margin-bottom: 12px;
+        font-weight: 600;
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .site-link:hover {
+        text-decoration: underline;
+      }
+
+      p {
+        margin: 0 0 14px;
+        color: var(--secondary);
+      }
+
+      .project-card ul {
+        margin: 18px 0 0;
+        padding-left: 20px;
+        color: var(--secondary);
+      }
+
+      .project-card li {
+        margin-bottom: 10px;
+      }
+
+      .project-card a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .project-card a:hover {
+        text-decoration: underline;
+      }
+
+      .overview {
+        background: linear-gradient(180deg, var(--surface-alt) 0%, #ffffff 100%);
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 28px;
+      }
+
+      .image-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .image-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 34px rgba(15, 23, 42, 0.08);
+      }
+
+      .image-card img {
+        display: block;
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+      }
+
+      footer {
+        background: #0f172a;
+        color: #e2e8f0;
+        padding: 28px 20px 36px;
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .footer-content {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 26px;
+        align-items: center;
+      }
+
+      footer a {
+        color: #93c5fd;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-meta {
+        color: #cbd5e1;
+        font-size: 0.97rem;
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          padding: 32px 22px;
+        }
+
+        .project-card {
+          padding: 22px 18px;
+        }
+
+        .image-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero">
+        <div class="eyebrow">Company portfolio</div>
+        <h1>Aurora</h1>
+        <p class="subtitle">
+          We are building digital projects across different fields, each designed to serve a distinct purpose.
+          From scientific education to trading technology, our projects reflect our focus on developing meaningful
+          digital platforms that create real value for their audiences.
+        </p>
+      </header>
+
+      <main class="projects">
+        <section class="project-card overview">
+          <h2>Introducing Our Projects: MyQuanta &amp; Crownship</h2>
+          <p>
+            MyQuanta and Crownship are two distinct ventures with different objectives, audiences, and areas of focus.
+            MyQuanta is centered on scientific education, while Crownship focuses on trading tools and digital commerce.
+            Together, they reflect our broader experience in building digital platforms that are practical, engaging, and thoughtfully designed.
+          </p>
+        </section>
+
+        <article class="project-card">
+          <h2>MyQuanta — Quantum Mechanics Learning Platform</h2>
+          <a class="site-link" href="https://www.myquanta.online" target="_blank" rel="noreferrer">myquanta.online</a>
+          <p>
+            MyQuanta is an educational platform dedicated to quantum mechanics and the fascinating principles of quantum physics.
+            Its goal is to make complex concepts more accessible through educational articles, visual explanations, and interactive learning experiences.
+          </p>
+          <p>
+            The platform explores topics such as quantum superposition, quantum entanglement, wave-particle duality,
+            the Bloch sphere, and major quantum experiments, helping students, science enthusiasts, and curious minds build a deeper understanding of the quantum world.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h2>Crownship — Trading Tool Marketplace</h2>
+          <a class="site-link" href="https://crownship.vercel.app" target="_blank" rel="noreferrer">crownship.vercel.app</a>
+          <p>
+            Crownship is a digital marketplace focused on trading tools and resources. It aims to provide traders with a convenient place to discover tools that can support their workflows and trading activities.
+          </p>
+          <p>
+            With a focus on innovation and digital accessibility, Crownship brings together trading-related products in a marketplace designed for users interested in exploring software and tools for the financial markets.
+          </p>
+        </article>
+
+        <section class="project-card">
+          <h3>Explore our projects</h3>
+          <ul>
+            <li><a href="https://www.myquanta.online" target="_blank" rel="noreferrer">MyQuanta</a></li>
+            <li><a href="https://crownship.vercel.app" target="_blank" rel="noreferrer">Crownship</a></li>
+          </ul>
+        </section>
+
+        <div class="image-grid">
+          <a class="image-card" href="https://sites.google.com/view/emertezora/home" target="_blank" rel="noopener noreferrer">
+            <img src="myquanta_logo.jpeg" alt="Emergezora logo" />
+          </a>
+          <a class="image-card" href="https://sites.google.com/view/crownship-tool1/home" target="_blank" rel="noopener noreferrer">
+            <img src="crownship_logo.jpeg" alt="Crownship logo" />
+          </a>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <span>Instagram: <a href="https://instagram.com/crownship.official?dlrf=MWhxNmZkMDBnY2h5eA%3D%3D">@crownship.official</a></span>
+        <span><a href="https://www.instagram.com/myquanta.online?srtk=dXU0d2RmMjhrbjBp">@myquanta.online</a></span>
+        <span class="footer-meta">Author: Shijin Joylal</span>
+        <span class="footer-meta">Contact: shijinjoylal@gmail.com</span>
+      </div>
+    </footer>
+  </body>
+</html>
